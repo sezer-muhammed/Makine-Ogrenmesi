@@ -10,7 +10,7 @@ wine_dataset = pd.read_excel(wine_dataset_path)
 Y = wine_dataset['quality']
 X = wine_dataset.drop('quality', axis=1)
 
-poly_model_regression = PolynomialFeatures(degree=6)
+poly_model_regression = PolynomialFeatures(degree=4)
 poly_X = poly_model_regression.fit_transform(X)
 
 linear_model_regression = linear_model.LinearRegression()
@@ -32,4 +32,4 @@ plt.ylabel("Tahmin Edilen Değerler")
 plt.show()
 
 result_dataframe = pd.DataFrame({'Gerçek Değerler': real_wine_quality, 'Tahmin Edilen Değerler': wine_quality_prediction})
-result_dataframe.to_excel(r"algoritmalar\regresyon\poly_regresyon_result.xlsx")
+result_dataframe.to_excel(r"algoritmalar\regresyon\poly_regresyon_result_degree4.xlsx")

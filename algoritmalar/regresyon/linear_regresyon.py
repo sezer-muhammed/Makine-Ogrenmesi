@@ -16,8 +16,8 @@ print("Sabit Değer: ", linear_model_regression.intercept_)
 print("Katsayılar: ", linear_model_regression.coef_)
 print("R^2 Değeri: ", linear_model_regression.score(X, Y))
 
-wine_quality_prediction = linear_model_regression.predict(X[0:5])
-real_wine_quality = Y[0:5]
+wine_quality_prediction = linear_model_regression.predict(X)
+real_wine_quality = Y
 
 print("Gerçek Değerler: ", real_wine_quality)
 print("Tahmin Edilen Değerler: ", wine_quality_prediction)
